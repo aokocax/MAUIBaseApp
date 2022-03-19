@@ -1,0 +1,76 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="MauiApp35.MainPage"
+
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+    <ScrollView>
+        <AbsoluteLayout>
+            <StackLayout BackgroundColor="Red">
+                <Image x:Name="image">
+                   
+                </Image>
+            </StackLayout>
+            
+            <StackLayout AbsoluteLayout.LayoutBounds="0,1,400,80" AbsoluteLayout.LayoutFlags="PositionProportional">
+                <ScrollView Orientation="Horizontal" >
+
+                    <StackLayout  BackgroundColor="Blue" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+
+                        <StackLayout BackgroundColor="black" WidthRequest="60" HeightRequest="60"  Margin="10,10,10,10" x:Name="First">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer
+                            Tapped="OnTapGestureRecognizerTapped"
+                            NumberOfTapsRequired="1" />
+                            </StackLayout.GestureRecognizers>
+
+                        </StackLayout>
+                        <StackLayout BackgroundColor="Green" WidthRequest="60" HeightRequest="60" Margin="10,10,10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer
+                            Tapped="TestNotification"
+                            NumberOfTapsRequired="1" />
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+
+                        <StackLayout BackgroundColor="Maroon" WidthRequest="60" HeightRequest="60" Margin="10,10,10,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer
+                            Tapped="TestAnim"
+                            NumberOfTapsRequired="1" />
+                            </StackLayout.GestureRecognizers>
+
+                        </StackLayout>
+                        <StackLayout BackgroundColor="Green" WidthRequest="60" HeightRequest="60" Margin="10,10,10,10">
+
+                        </StackLayout>
+                        <StackLayout BackgroundColor="Bisque" WidthRequest="60" HeightRequest="60" Margin="10,10,10,10">
+
+                        </StackLayout>
+                        <StackLayout BackgroundColor="Green" WidthRequest="60" HeightRequest="60" Margin="10,10,10,10">
+
+                        </StackLayout>
+                        <StackLayout BackgroundColor="Brown" WidthRequest="60" HeightRequest="60" Margin="10,10,10,10">
+
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+      
+            
+            <Image  AbsoluteLayout.LayoutBounds="0.5,1,400,200" Source="Images/robot.png" x:Name="selector">
+               
+                <Image.GestureRecognizers >
+                    
+                    <TapGestureRecognizer
+                            Tapped="AddImage"
+                            NumberOfTapsRequired="1" />
+                   
+                </Image.GestureRecognizers>
+            </Image>
+        
+
+        </AbsoluteLayout>
+    </ScrollView>
+</ContentPage>
